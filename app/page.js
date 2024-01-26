@@ -35,7 +35,7 @@ export default function Home() {
       </div>
 
       <div className="ml-10 mr-10">
-        <div className="flex flex-row justify-end">
+        <div className="flex absolute flex-row justify-end">
           <div onClick={() => setClose(!close)} className="cursor-pointer">
             Open
           </div>

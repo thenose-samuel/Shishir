@@ -5,16 +5,23 @@ import { getIntersection } from "mezr";
 
 export default function Events() {
   const [scroll, setScroll] = useState(500);
+  const [listItemState, setListItem] = useState(false);
   const [isIntersecting, setIsIntersecting] = useState(false);
+  const listItem = useRef();
+
   const ref = useRef();
   const floatingElement = useRef();
-  const listItem = useRef();
+  // const listItem = useRef();
 
   const set = (val, func) => {
     func(val);
   };
   const handleScroll = (e) => {
-    console.log(getIntersection(floatingElement.current, [listItem.current]));
+    if (getIntersection(floatingElement.current, [listItem.current]) !== null) {
+      setListItem(true);
+    } else {
+      setListItem(false);
+    }
     set(e.target.scrollTop, setScroll);
   };
 
@@ -75,7 +82,7 @@ export default function Events() {
         <div
           ref={listItem}
           className=""
-          style={{ fontSize: isIntersecting ? "100px" : "20px" }}
+          style={{ fontSize: listItemState ? "100px" : "20px" }}
         >
           {scroll}
         </div>

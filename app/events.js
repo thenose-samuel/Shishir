@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import { getIntersection } from "mezr";
 
 export default function Events() {
-  const [scroll, setScroll] = useState(500);
+  const [scroll, setScroll] = useState(0);
   const [listItemState, setListItem] = useState(false);
   const listItems = useRef({});
   const [activeImg, setActiveImg] = useState(0);
@@ -80,58 +80,69 @@ export default function Events() {
         onClick={() => {
           setScroll(scroll + 10);
         }}
-        className={`h-6 bg-yellow-400 absolute`}
-        style={{ width: `100px`, top: `${scroll / 10}%` }}
+        className={`h-6 bg-[] absolute`}
+        style={{
+          width: `100px`,
+          top: `${
+            scroll / 10 + 0.06 * scroll > 95 ? 95 : scroll / 10 + 0.06 * scroll
+          }%`,
+        }}
         ref={floatingElement}
       ></div>
       <div
-        ref={ref}
-        id="main-list"
-        className={`text-4xl space-y-10 transition-all pt-2 overflow-scroll h-[100vh] bg-cover `}
+        className="transition-all duration-300 bg-cover"
         style={{ backgroundImage: `url("/events/${imgURLS[activeImg]}")` }}
       >
-        <div
-          ref={(ref) => (listItems.current[0] = ref)}
-          className=""
-          style={{ color: listItemState[0] ? "yellow" : "gray" }}
-        >
-          {scroll}
+        <div className="bg-neutral-900 bg-opacity-40">
+          <div
+            ref={ref}
+            id="main-list"
+            className={`text-3xl space-y-10 font-bold pt-32 pl-14 overflow-scroll h-[100vh]  `}
+          >
+            <div
+              ref={(ref) => (listItems.current[0] = ref)}
+              className=""
+              style={{ color: listItemState[0] ? "#FFFF00" : "gray" }}
+            >
+              PANACHE
+            </div>
+            <div
+              ref={(ref) => (listItems.current[1] = ref)}
+              className="transition-colors"
+              style={{ color: listItemState[1] ? "#FFFF00" : "gray" }}
+            >
+              SHIMMER
+            </div>
+            <div
+              ref={(ref) => (listItems.current[2] = ref)}
+              className=""
+              style={{ color: listItemState[2] ? "#FFFF00" : "gray" }}
+            >
+              ITEM
+            </div>
+            <div className="">ITEM</div>
+            <div className="">ITEM</div>
+            <div className="">ITEM</div>
+            <div className="">ITEM</div>
+            <div className="">ITEM</div>
+            <div className="">ITEM</div>
+            <div className="">ITEM</div>
+            <div className="">ITEM</div>
+            <div className="">ITEM</div>
+            <div className="">ITEM</div>
+            <div className="">ITEM</div>
+            <div
+              className=""
+              style={{ fontSize: listItemState[0] ? "100px" : "20px" }}
+            >
+              {scroll}
+            </div>
+            <div className="">ITEM</div>
+            <div className="">ITEM</div>
+            <div className="">ITEM</div>
+            <div className="">ITEM</div>
+          </div>
         </div>
-        <div
-          ref={(ref) => (listItems.current[1] = ref)}
-          className="transition-colors"
-          style={{ color: listItemState[1] ? "yellow" : "gray" }}
-        >
-          ITEM
-        </div>
-        <div
-          ref={(ref) => (listItems.current[2] = ref)}
-          className=""
-          style={{ color: listItemState[2] ? "yellow" : "gray" }}
-        >
-          ITEM
-        </div>
-        <div className="">ITEM</div>
-        <div className="">ITEM</div>
-        <div className="">ITEM</div>
-        <div className="">ITEM</div>
-        <div className="">ITEM</div>
-        <div className="">ITEM</div>
-        <div className="">ITEM</div>
-        <div className="">ITEM</div>
-        <div className="">ITEM</div>
-        <div className="">ITEM</div>
-        <div className="">ITEM</div>
-        <div
-          className=""
-          style={{ fontSize: listItemState[0] ? "100px" : "20px" }}
-        >
-          {scroll}
-        </div>
-        <div className="">ITEM</div>
-        <div className="">ITEM</div>
-        <div className="">ITEM</div>
-        <div className="">ITEM</div>
       </div>
     </>
   );

@@ -1,0 +1,52 @@
+#home {
+  position: relative;
+  z-index: -10;
+  overflow: hidden;
+  opacity: 0;
+  animation: loadPage 0.8s ease 3s forwards;
+}
+
+#splash-inner {
+  opacity: 1;
+  animation: removeInnerSplash 0.8s ease 3s forwards;
+}
+
+#splash {
+  position: absolute;
+  background-color: black;
+  width: 100vw;
+  height: 100vh;
+  animation: removeSplash 0.8s ease 3s forwards;
+}
+
+@keyframes loadPage {
+  from {
+    opacity: 0;
+    overflow: scroll;
+    transform: translateY(120%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+@keyframes removeSplash {
+  from {
+    height: 100vh;
+  }
+  to {
+    height: 0vh;
+    display: none;
+  }
+}
+
+@keyframes removeInnerSplash {
+  from {
+    opacity: 1;
+  }
+  to {
+    display: none;
+    opacity: 0;
+  }
+}

@@ -1,0 +1,86 @@
+#nav {
+  position: absolute;
+  height: 100vh;
+  width: 0vw;
+  right: 0;
+  background-color: #050505;
+  overflow: hidden;
+}
+
+#nav[close="0"] {
+  animation: openDrawer 0.8s ease-out forwards;
+}
+
+#nav[close="1"] {
+  animation: closeDrawer 1s ease-out forwards;
+}
+
+#items[close="0"] {
+  opacity: 0;
+  animation: showText 1s ease-in-out forwards;
+}
+
+#items[close="1"] {
+  animation: hideText 0.8s ease-in-out forwards;
+}
+
+#items span:nth-child(1) {
+  animation-delay: 0;
+  /* color: red; */
+}
+#items span:nth-child(2) {
+  /* color: pink; */
+  animation-delay: 2s;
+}
+#items span:nth-child(3) {
+  /* color: gray; */
+  animation-delay: 4s;
+}
+
+@keyframes closeDrawer {
+  to {
+    width: 0vw;
+    /* clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); */
+    /* opacity: 0; */
+  }
+  from {
+    width: 100vw;
+    /* opacity: 1; */
+    /* clip-path: polygon(0 0, 100% 0, 100% 87%, 0 100%); */
+  }
+}
+
+@keyframes openDrawer {
+  from {
+    width: 0vw;
+    /* opacity: 0; */
+    /* clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); */
+  }
+  to {
+    width: 100vw;
+    /* opacity: 1; */
+    /* clip-path: polygon(0 0, 100% 0, 100% 87%, 0 100%); */
+  }
+}
+
+@keyframes showText {
+  from {
+    opacity: 0;
+    transform: translateY(90%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+@keyframes hideText {
+  from {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-90%);
+  }
+}

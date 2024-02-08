@@ -1,47 +1,43 @@
-"use client";
-
-import { useState } from "react";
-import "./nav.css";
-
-import Events from "./events";
+import "./home.css";
 
 export default function Home() {
-  const [close, setClose] = useState(true);
-
   return (
     <>
-      <div close={close ? "1" : "0"} id="nav" className="">
-        <div
-          className="text-white mr-10 text-end"
-          onClick={() => setClose(!close)}
-        >
-          {" "}
-          Close
-        </div>
-        <div className="flex flex-row justify-center pl-10 pr-10">
-          <div className="overflow-hidden flex flex-row  justify-center mt-10">
-            <div
-              close={close ? "1" : "0"}
-              id="items"
-              className="text-4xl space-y-10  text-white mt-10 items-center flex flex-col"
-            >
-              <span id="items">HOME</span>
-              <span id="items">EVENTS</span>
-              <span id="items">TEAMS</span>
-              <span id="items">SPONSORS</span>
-            </div>
+      <div className="h-screen overflow-scroll">
+        <div id="splash">
+          <div id="splash-inner" className="text-red-700 text-center font-bold">
+            Welcome to Shishir 2024!
           </div>
         </div>
-      </div>
-
-      <div className="ml-10 mr-10">
-        <div className="flex absolute flex-row justify-end">
-          <div onClick={() => setClose(!close)} className="cursor-pointer">
-            Open
-          </div>
+        <div id="home" className="text-center pt-24 bg-red-500">
+          <div>This is the Shishir Home Page</div>
+          <div>Welcome one and all!!!</div>
+        </div>
+        <div id="home" className="text-center pt-24">
+          <div>This is the Shishir Home Page</div>
+          <div>Welcome one and all!!!</div>
+        </div>
+        <div id="home" className="text-center pt-24">
+          <div>This is the Shishir Home Page</div>
+          <div>Welcome one and all!!!</div>
+        </div>
+        <div id="home" className="text-center pt-24">
+          <div>This is the Shishir Home Page</div>
+          <div>Welcome one and all!!!</div>
+        </div>
+        <div id="home" className="text-center pt-24">
+          <div>This is the Shishir Home Page</div>
+          <div>Welcome one and all!!!</div>
+        </div>
+        <div id="home" className="text-center pt-24">
+          <div>This is the Shishir Home Page</div>
+          <div>Welcome one and all!!!</div>
+        </div>
+        <div id="home" className="text-center pt-24">
+          <div>This is the Shishir Home Page</div>
+          <div>Welcome one and all!!!</div>
         </div>
       </div>
-      <Events />
     </>
   );
 }

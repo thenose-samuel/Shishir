@@ -24,7 +24,7 @@ export default function Navbar() {
                   id="items"
                   className="text-3xl font-bukhari mr-4 text-[#186B80]"
                 >
-                  ...............
+                  ............
                 </span>
                 <span
                   id="items"
@@ -42,7 +42,7 @@ export default function Navbar() {
                   id="items"
                   className="text-3xl font-bukhari mr-4 text-[#186B80]"
                 >
-                  .............
+                  ...........
                 </span>
                 <span
                   id="items"
@@ -60,7 +60,7 @@ export default function Navbar() {
                   id="items"
                   className="text-3xl font-bukhari mr-4 text-[#186B80]"
                 >
-                  ...........
+                  .........
                 </span>
                 <span
                   id="items"
@@ -77,7 +77,7 @@ export default function Navbar() {
                   id="items"
                   className="text-3xl font-bukhari mr-4 text-[#186B80]"
                 >
-                  ..............
+                  ...........
                 </span>
                 <span
                   id="items"

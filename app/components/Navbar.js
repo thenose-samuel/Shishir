@@ -10,21 +10,82 @@ export default function Navbar() {
 
   return (
     <>
-      <div close={close} id="nav" className="absolute bg-black">
-        <div className="flex flex-row justify-center pl-10 pr-10">
-          <div className="overflow-hidden flex flex-row  justify-center mt-10">
-            <div
-              close={close}
-              id="items"
-              className="text-4xl space-y-24 font-semibold  text-white mt-10 items-center flex flex-col"
-            >
-              <span id="items">HOME</span>
-              <Link href={"/events"}>
-                <span id="items">EVENTS</span>
-              </Link>
-              <span id="items">TEAMS</span>
-              <span id="items">SPONSORS</span>
-              <span id="items">MUN</span>
+      <div close={close} id="nav" className="absolute bg-[#F1EAE5]">
+        <div className="ml-5 mr-5">
+          <div
+            close={close}
+            id="items"
+            className="text-5xl  space-y-3 font-medium font-bernier text-[#E03932] mt-10  flex flex-col"
+          >
+            <div className="flex justify-between space-x-6">
+              <span id="items">Home</span>
+              <div className="flex justify-end ">
+                <span
+                  id="items"
+                  className="text-3xl font-bukhari mr-4 text-[#186B80]"
+                >
+                  ...............
+                </span>
+                <span
+                  id="items"
+                  className="text-3xl font-bukhari text-[#186B80]"
+                >
+                  1
+                </span>
+              </div>
+            </div>
+
+            <div className="flex justify-between space-x-6">
+              <span id="items">Events</span>
+              <div className="flex justify-end ">
+                <span
+                  id="items"
+                  className="text-3xl font-bukhari mr-4 text-[#186B80]"
+                >
+                  .............
+                </span>
+                <span
+                  id="items"
+                  className="text-3xl font-bukhari text-[#186B80]"
+                >
+                  2
+                </span>
+              </div>
+            </div>
+
+            <div className="flex justify-between space-x-6">
+              <span id="items">Sponsors</span>
+              <div className="flex justify-end ">
+                <span
+                  id="items"
+                  className="text-3xl font-bukhari mr-4 text-[#186B80]"
+                >
+                  ...........
+                </span>
+                <span
+                  id="items"
+                  className="text-3xl font-bukhari text-[#186B80]"
+                >
+                  3
+                </span>
+              </div>
+            </div>
+            <div className="flex justify-between space-x-6">
+              <span id="items">Teams</span>
+              <div className="flex justify-end ">
+                <span
+                  id="items"
+                  className="text-3xl font-bukhari mr-4 text-[#186B80]"
+                >
+                  ..............
+                </span>
+                <span
+                  id="items"
+                  className="text-3xl font-bukhari text-[#186B80]"
+                >
+                  4
+                </span>
+              </div>
             </div>
           </div>
         </div>

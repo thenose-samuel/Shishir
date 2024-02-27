@@ -2,4 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "Bukhari";
+  src: url("../public/fonts/BukhariScript-Regular.ttf");
+}
 
+@font-face {
+  font-family: "Bernier";
+  src: url("../public/fonts/BERNIERDistressed-Regular.ttf");
+}

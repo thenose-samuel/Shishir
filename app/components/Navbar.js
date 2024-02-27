@@ -22,13 +22,13 @@ export default function Navbar() {
               <div className="flex justify-end ">
                 <span
                   id="items"
-                  className="text-3xl font-bukhari mr-4 text-[#186B80]"
+                  className="text-2xl font-bukhari mr-4 text-[#186B80]"
                 >
-                  ............
+                  ..............
                 </span>
                 <span
                   id="items"
-                  className="text-3xl font-bukhari text-[#186B80]"
+                  className="text-2xl font-bukhari text-[#186B80]"
                 >
                   1
                 </span>
@@ -40,13 +40,13 @@ export default function Navbar() {
               <div className="flex justify-end ">
                 <span
                   id="items"
-                  className="text-3xl font-bukhari mr-4 text-[#186B80]"
+                  className="text-2xl font-bukhari mr-4 text-[#186B80]"
                 >
-                  ...........
+                  ............
                 </span>
                 <span
                   id="items"
-                  className="text-3xl font-bukhari text-[#186B80]"
+                  className="text-2xl font-bukhari text-[#186B80]"
                 >
                   2
                 </span>
@@ -58,13 +58,13 @@ export default function Navbar() {
               <div className="flex justify-end ">
                 <span
                   id="items"
-                  className="text-3xl font-bukhari mr-4 text-[#186B80]"
+                  className="text-2xl font-bukhari mr-4 text-[#186B80]"
                 >
                   .........
                 </span>
                 <span
                   id="items"
-                  className="text-3xl font-bukhari text-[#186B80]"
+                  className="text-2xl font-bukhari text-[#186B80]"
                 >
                   3
                 </span>
@@ -75,13 +75,13 @@ export default function Navbar() {
               <div className="flex justify-end ">
                 <span
                   id="items"
-                  className="text-3xl font-bukhari mr-4 text-[#186B80]"
+                  className="text-2xl font-bukhari mr-4 text-[#186B80]"
                 >
                   ...........
                 </span>
                 <span
                   id="items"
-                  className="text-3xl font-bukhari text-[#186B80]"
+                  className="text-2xl font-bukhari text-[#186B80]"
                 >
                   4
                 </span>

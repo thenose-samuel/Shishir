@@ -3,6 +3,9 @@
 import { useState } from "react";
 
 import "./nav.css";
+import Close from "../../public/Close.svg";
+import Image from "next/image";
+import HamBurger from "../../public/Hamburger.svg";
 
 export default function Navbar() {
   const [close, setClose] = useState(null);
@@ -14,7 +17,7 @@ export default function Navbar() {
           <div
             close={close}
             id="items"
-            className="text-5xl  space-y-3 font-medium font-bernier text-[#E03932] mt-10  flex flex-col"
+            className="text-5xl  space-y-3 font-medium font-bernier text-[#E03932] mt-16  flex flex-col"
           >
             <div className="flex justify-between space-x-6">
               <span id="items">Home</span>
@@ -102,10 +105,26 @@ export default function Navbar() {
               setClose("1");
             }
           }}
-          className="cursor-pointer font-bold transition-all duration-1000"
+          className="cursor-pointer m-4 font-bold transition-all duration-1000"
           style={{ color: close === "0" ? "white" : "black" }}
         >
-          Open
+          {close === "0" ? (
+            <Image
+              src={Close}
+              width="0"
+              height="0"
+              sizes="100vw"
+              className="w-[10vw]  h-auto"
+            />
+          ) : (
+            <Image
+              src={HamBurger}
+              width="0"
+              height="0"
+              sizes="100vw"
+              className="w-[10vw]  h-auto"
+            />
+          )}
         </div>
       </div>
     </>

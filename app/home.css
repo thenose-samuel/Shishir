@@ -23,7 +23,7 @@
   from {
     opacity: 0;
     overflow: scroll;
-    transform: translateY(120%);
+    transform: translateY(150%);
   }
   to {
     opacity: 1;
